@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"noEmitOnError": true,
+		"lib": ["ES6"],
+		"target": "ES6",
+		"outFile": "script.js"
+	},
+	"files": [
+		"script.ts",
+		"source/DataBuffer.ts",
+		"source/math/Vector.ts",
+		"source/math/Vector2.ts",
+		"source/math/Complex.ts",
+		"source/math/Vector3.ts",
+		"source/math/Vector4.ts",
+		"source/serializers/AttributeDescription.ts",
+		"source/serializers/FloatSerializer.ts",
+		"source/serializers/HalfFloatSerializer.ts",
+		"source/serializers/IntegerSerializer.ts",
+		"source/serializers/ByteSerializer.ts",
+		"source/serializers/IntSerializer.ts",
+		"source/serializers/Serializer.ts",
+		"source/serializers/ShortSerializer.ts",
+		"source/serializers/Vector2Serializer.ts",
+		"source/serializers/Vector3Serializer.ts",
+		"source/serializers/Vector4CompactSerializer.ts",
+		"source/serializers/Vector4Serializer.ts"
+	]
+}
