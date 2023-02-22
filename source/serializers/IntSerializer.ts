@@ -7,8 +7,12 @@ class IntSerializer extends IntegerSerializer<number> {
 		let value = dataView.getUint32(byteOffset, true);
 
 		if (this.isNormalized) {
-			// TODO: handle normalization properly
-			value = value;
+			if (this.isSigned) {
+				value = this.intToFloat(value, 32);
+			}
+			else {
+				value = this.uintToFloat(value, 32);
+			}
 		}
 		else if (this.isSigned) {
 			// handle non-normalized, signed reads
@@ -20,8 +24,12 @@ class IntSerializer extends IntegerSerializer<number> {
 
 	public write(dataView: DataView, byteOffset: number, value: number): void {
 		if (this.isNormalized) {
-			// TODO: handle normalization properly
-			value = value;
+			if (this.isSigned) {
+				value = this.floatToInt(value, 32);
+			}
+			else {
+				value = this.floatToUint(value, 32);
+			}
 		}
 
 		dataView.setUint32(byteOffset, value, true);
